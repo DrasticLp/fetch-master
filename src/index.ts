@@ -9,7 +9,7 @@ async function get(link: string) {
   await page.setJavaScriptEnabled(true);
   await page.setDefaultNavigationTimeout(0);
   await page.goto(link);
-  const bodyHTML = await page.evaluate(() => document.body.innerHTML);
+  const bodyHTML = await page.evaluate(() => document.body.innerHTML.replace('<pre>', "").replace("</pre>", ""));
   await browser.close();
   return bodyHTML;
 }
