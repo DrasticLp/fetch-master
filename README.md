@@ -1,0 +1,1 @@
+Easy to use fetch-get function using puppeteer headlessly

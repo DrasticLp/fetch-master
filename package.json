@@ -2,7 +2,8 @@
   "name": "fetchmaster",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "keywords": [
     "fetch",
     "get",
@@ -15,7 +16,8 @@
     "runwhithoutcompile": "node lib/index.js",
     "format": "prettier --write \"src/**/*.ts|.js\"",
     "lint": "tslint -p tsconfig.json",
-    "compile": "tsc && npm run lint && npm run format"
+    "compile": "tsc && npm run lint && npm run format",
+    "prepublish": "npm run compile"
   },
   "author": "",
   "license": "ISC",
